@@ -2,10 +2,10 @@ FROM node:19.4.0 as webassets-builder
 
 WORKDIR /homepage
 
-COPY src src/
-COPY public public/
-COPY package.json .
-COPY tailwind.config.js .
+COPY homepage/src src/
+COPY homepage/public public/
+COPY homepage/package.json .
+COPY homepage/tailwind.config.js .
 RUN npm install
 RUN npm run build
 
