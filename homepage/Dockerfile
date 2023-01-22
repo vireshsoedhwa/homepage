@@ -11,6 +11,9 @@ RUN npm run build
 
 FROM alpine:3.17.1 as release
 WORKDIR /homepage
+ARG VERSION
+ENV VERSION=${VERSION:-1.0.0}
+RUN echo $VERSION > image_version
 
 RUN apk add --update npm
 
