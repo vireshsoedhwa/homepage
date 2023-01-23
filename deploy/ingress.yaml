@@ -4,7 +4,7 @@ metadata:
   name: homepage-ingress
   namespace: homepage
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/proxy-body-size: 1000m
 spec:
   ingressClassName: public
