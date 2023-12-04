@@ -6,8 +6,8 @@ services:
     image: homepage
     build:
       context: .
-    # volumes:
-    #   - .:/homepage
+    volumes:
+      - ./homepage:/homepage
     environment:
       - DEBUG=1
       - DJANGO_SECRET_KEY=654564ytffff55474fjddgdg
